@@ -1,0 +1,657 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  cursor: default;
+  overflow-x: hidden; }
+
+body::-webkit-scrollbar {
+  width: 8px; }
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #EEE; }
+
+::-webkit-scrollbar-thumb {
+  background: #ff4649; }
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(100, 100, 100, 0.4); }
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 5vw;
+  color: #222; }
+
+a {
+  text-decoration: none;
+  color: #ff4649; }
+
+em {
+  font-style: normal;
+  position: relative; }
+
+p {
+  font-family: 'Inconsolata', monospace;
+  font-weight: 400;
+  font-size: 1.7em;
+  color: #222; }
+
+@keyframes scale {
+  0% {
+    opacity: 0;
+    transform: scale(1.2); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+@-webkit-keyframes scale {
+  0% {
+    opacity: 0;
+    transform: scale(1.2); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+@-moz-keyframes scale {
+  0% {
+    opacity: 0;
+    transform: scale(1.2); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+@keyframes translate {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+@-webkit-keyframes translate {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+@-moz-keyframes translate {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+@keyframes translateSmile {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); }
+  25% {
+    opacity: 1; }
+  50% {
+    border-bottom-left-radius: 10%; }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    border-bottom-right-radius: 15%;
+    border-bottom-left-radius: 30%; } }
+@-webkit-keyframes translateSmile {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); }
+  25% {
+    opacity: 1; }
+  50% {
+    border-bottom-left-radius: 10%; }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    border-bottom-right-radius: 15%;
+    border-bottom-left-radius: 30%; } }
+@-moz-keyframes translateSmile {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); }
+  25% {
+    opacity: 1; }
+  50% {
+    border-bottom-left-radius: 10%; }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    border-bottom-right-radius: 15%;
+    border-bottom-left-radius: 30%; } }
+@keyframes blink {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes blink {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes translateXR {
+  0% {
+    opacity: 0;
+    transform: translateX(30px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+@-webkit-keyframes translateXR {
+  0% {
+    opacity: 0;
+    transform: translateX(30px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+@-moz-keyframes translateXR {
+  0% {
+    opacity: 0;
+    transform: translateX(30px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+@keyframes translateXL {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+@-webkit-keyframes translateXL {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+@-moz-keyframes translateXL {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+@keyframes translateDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0); }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px); } }
+@-webkit-keyframes translateDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0); }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px); } }
+@-moz-keyframes translateDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0); }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px); } }
+#home {
+  text-align: center;
+  height: 60vh;
+  position: relative; }
+  #home h1 {
+    display: none;
+    animation: scale .8s;
+    -webkit-animation: scale .8s;
+    -moz-animation: scale .8s;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards; }
+    #home h1 em {
+      transition-duration: .2s; }
+    #home h1 em.active {
+      color: #ff4649; }
+    #home h1 em.active:after {
+      content: '';
+      width: 14vw;
+      height: 100px;
+      border-bottom: 10px solid;
+      border-bottom-left-radius: 3%;
+      border-bottom-right-radius: 2%;
+      position: absolute;
+      right: 0;
+      bottom: -20px;
+      animation: translateSmile 1s;
+      -webkit-animation: translateSmile 1s;
+      -moz-animation: translateSmile 1s;
+      animation-iteration-count: 1;
+      -webkit-animation-iteration-count: 1;
+      -moz-animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+      -moz-animation-fill-mode: forwards; }
+  #home p {
+    width: 40vw;
+    height: 60px;
+    margin: 0 auto;
+    opacity: 0; }
+    #home p::after {
+      content: "";
+      border: 1px solid #000;
+      margin-left: 4px;
+      animation-name: blink;
+      -webkit-animation-name: blink;
+      -moz-animation-name: blink;
+      animation-iteration-count: infinite;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      -moz-animation-duration: 1s; }
+  #home p.active {
+    opacity: 1; }
+  #home .social {
+    display: block;
+    margin: 50px auto 0 auto;
+    opacity: 0; }
+    #home .social a {
+      color: #FFF; }
+      #home .social a:first-of-type {
+        position: relative; }
+        #home .social a:first-of-type img {
+          vertical-align: bottom;
+          cursor: pointer; }
+        #home .social a:first-of-type:before {
+          content: 'Get some cool examples';
+          color: #222;
+          font-family: 'Inconsolata', monospace;
+          vertical-align: super;
+          position: absolute;
+          bottom: 12px;
+          opacity: 0;
+          left: -180px;
+          pointer-events: none; }
+        #home .social a:first-of-type:hover:before {
+          opacity: 1;
+          animation: translateXL .2s;
+          -webkit-animation: translateXL .2s;
+          -moz-animation: translateXL .2s;
+          animation-iteration-count: 1;
+          -webkit-animation-iteration-count: 1;
+          -moz-animation-iteration-count: 1;
+          animation-fill-mode: forwards;
+          -webkit-animation-fill-mode: forwards;
+          -moz-animation-fill-mode: forwards; }
+      #home .social a:last-of-type:after {
+        content: "It's open source! Get the code";
+        color: #222;
+        font-family: 'Inconsolata', monospace;
+        vertical-align: super;
+        position: absolute;
+        bottom: 12px;
+        opacity: 0;
+        pointer-events: none; }
+      #home .social a:last-of-type:hover:after {
+        opacity: 1;
+        animation: translateXR .2s;
+        -webkit-animation: translateXR .2s;
+        -moz-animation: translateXR .2s;
+        animation-iteration-count: 1;
+        -webkit-animation-iteration-count: 1;
+        -moz-animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards; }
+    #home .social img {
+      height: 40px;
+      width: 40px;
+      -webkit-transition-duration: .2s;
+      -moz-transition-duration: .2s;
+      margin: 0 20px; }
+      #home .social img:hover {
+        -webkit-transform: translateY(-4px);
+        -moz-transform: translateY(-4px); }
+  #home .social.active {
+    opacity: 1;
+    animation: translate .6s;
+    -webkit-animation: translate .6s;
+    -moz-animation: translate .6s;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards; }
+
+#projects {
+  opacity: 0; }
+  #projects p.title {
+    color: #CCC;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    text-align: center; }
+  #projects .container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap; }
+    #projects .container .proj {
+      width: 50%;
+      height: 100%;
+      padding: 0 100px 60px 100px;
+      position: relative; }
+      #projects .container .proj a:not(.link):after {
+        content: "click to go";
+        float: right;
+        background: red;
+        padding: 7px 14px;
+        border-radius: 2px;
+        color: #FFF;
+        opacity: 0;
+        font-family: 'Inconsolata', monospace;
+        pointer-events: none; }
+      #projects .container .proj a:not(.link):hover:after {
+        opacity: 1;
+        animation: translateXR .2s;
+        -webkit-animation: translateXR .2s;
+        -moz-animation: translateXR .2s;
+        animation-iteration-count: 1;
+        -webkit-animation-iteration-count: 1;
+        -moz-animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards; }
+      #projects .container .proj img {
+        width: 100%;
+        height: 100%;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        transition-duration: .2s;
+        position: relative;
+        opacity: .7; }
+        #projects .container .proj img:hover {
+          transform: translateY(-8px);
+          cursor: pointer;
+          opacity: 1; }
+        #projects .container .proj img:after {
+          content: 'A';
+          border: 3px solid;
+          width: 100%;
+          height: 100%;
+          background: red;
+          display: block;
+          position: absolute; }
+      #projects .container .proj h1 {
+        font-size: 4vw;
+        position: absolute;
+        bottom: 120px;
+        left: 50px; }
+      #projects .container .proj p {
+        font-size: 1.2em;
+        display: block; }
+        #projects .container .proj p strong {
+          color: #ff4649; }
+        #projects .container .proj p:first-of-type {
+          margin-top: 50px; }
+
+#projects.active {
+  opacity: 1;
+  animation: translate .6s;
+  -webkit-animation: translate .6s;
+  -moz-animation: translate .6s;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards; }
+
+#contact h1 {
+  text-align: center;
+  font-size: 3em; }
+  #contact h1 em {
+    color: #ff4649; }
+#contact form {
+  width: 30%;
+  display: block;
+  margin: 0 auto;
+  position: relative; }
+  #contact form:before {
+    content: '';
+    position: absolute;
+    background: rgba(249, 249, 249, 0.8);
+    width: 100%;
+    height: 100%; }
+  #contact form:after {
+    content: "I'm not available to new jobs for now. Come back later. Thanks!";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Inconsolata', monospace;
+    text-transform: none;
+    font-size: 1.8em;
+    width: 100%; }
+  #contact form input,
+  #contact form select,
+  #contact form button {
+    width: 100%;
+    margin: 8px 0;
+    font-size: 1.2em;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    outline: none; }
+    #contact form input:not(button),
+    #contact form select:not(button),
+    #contact form button:not(button) {
+      font-family: 'Inconsolata', monospace; }
+  #contact form input {
+    border: 0;
+    border-bottom: 2px solid #222;
+    background: transparent;
+    outline: none; }
+  #contact form select {
+    cursor: pointer; }
+  #contact form select[disabled] {
+    cursor: default; }
+  #contact form button {
+    text-transform: uppercase;
+    border: 2px solid #222;
+    color: #222;
+    transition-duration: .2s; }
+    #contact form button:hover {
+      cursor: pointer;
+      background: #ff4649;
+      color: #FFF; }
+  #contact form button.done {
+    background: #ff4649;
+    position: relative;
+    color: #FFF; }
+    #contact form button.done:after {
+      content: "Thanks, I'll contact you ASAP";
+      width: 100%;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 55px;
+      color: #222; }
+    #contact form button.done:hover {
+      cursor: default; }
+  #contact form button.error {
+    background: #ff4649;
+    position: relative;
+    color: #FFF; }
+    #contact form button.error:after {
+      content: "Something went wrong, try F5!";
+      width: 100%;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 55px;
+      color: #222; }
+    #contact form button.error:hover {
+      cursor: default; }
+#contact p {
+  text-align: center;
+  font-size: 1em;
+  margin: 150px 0 50px 0; }
+
+.konami {
+  opacity: 0;
+  position: fixed;
+  left: 0;
+  bottom: -10px;
+  pointer-events: none; }
+  .konami .quote {
+    opacity: 0;
+    position: fixed;
+    z-index: 999;
+    bottom: 40px;
+    left: 300px;
+    width: 400px;
+    background: #FFF;
+    border: 3px solid #222; }
+    .konami .quote p {
+      padding: 10px;
+      font-family: 'Inconsolata', monospace;
+      font-size: 2em;
+      margin: 0; }
+  .konami .quote.active {
+    opacity: 1;
+    animation: translateXL .8s;
+    -webkit-animation: translateXL .8s;
+    -moz-animation: translateXL .8s;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards; }
+
+.konami.active {
+  opacity: 1;
+  z-index: 999;
+  animation: translateXL .8s;
+  -webkit-animation: translateXL .8s;
+  -moz-animation: translateXL .8s;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards; }
+
+@media screen and (max-width: 1440px) {
+  #home p {
+    width: 50vw; } }
+@media screen and (max-width: 1280px) {
+  #projects .container .proj h1 {
+    bottom: 135px; }
+  #projects .container .proj p {
+    font-size: 1em; } }
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+  #home {
+    height: 35vh; }
+    #home h1 {
+      font-size: 6vw; }
+      #home h1 em.active:after {
+        width: 17vw;
+        height: 65px;
+        bottom: -15px; }
+    #home p {
+      width: 90vw; }
+
+  #projects .container .proj {
+    padding: 10px 30px; }
+    #projects .container .proj h1 {
+      font-size: 5vw;
+      bottom: 70px; }
+    #projects .container .proj p {
+      font-size: 0.8em; }
+
+  #contact h1 {
+    font-size: 2em; } }
+@media all and (device-width: 1024px) and (device-height: 768px) and (orientation: landscape) {
+  #home h1 {
+    font-size: 6vw; }
+    #home h1 em.active:after {
+      width: 17vw;
+      height: 65px;
+      bottom: -15px; }
+  #home p {
+    width: 70vw; }
+
+  #projects .container .proj {
+    padding: 10px 30px; }
+    #projects .container .proj h1 {
+      font-size: 5vw;
+      bottom: 60px;
+      left: 10px; }
+    #projects .container .proj p {
+      font-size: 0.8em; }
+
+  #contact h1 {
+    font-size: 2em; } }
+@media screen and (max-width: 490px) {
+  #home {
+    height: 75vh; }
+    #home h1 {
+      font-size: 13vw;
+      margin: 20px 0; }
+      #home h1 em.active:after {
+        display: none; }
+    #home .social {
+      margin: 10px auto 0 auto; }
+    #home p {
+      width: 90vw;
+      font-size: .9em; }
+
+  #projects p.title {
+    font-size: 7vw; }
+  #projects .container .proj {
+    width: 100%;
+    padding: 15px; }
+    #projects .container .proj h1 {
+      font-size: 15vw;
+      left: 5px;
+      bottom: 80px; }
+    #projects .container .proj:not(:first-of-type) {
+      padding-top: 50px; }
+
+  #contact {
+    padding-top: 40px; }
+    #contact h1 {
+      font-size: 1.5em; }
+    #contact form {
+      width: 90%; }
+      #contact form:after {
+        font-size: 1.5em;
+        text-align: center; }
+
+  .konami img {
+    width: 50%; }
+  .konami .quote.active {
+    left: 40%;
+    width: 55%; }
+    .konami .quote.active p {
+      font-size: 1.2em; } }
+@media screen and (max-width: 320px) {
+  #projects .container .proj h1 {
+    bottom: 100px; } }
