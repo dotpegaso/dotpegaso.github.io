@@ -38,31 +38,3 @@ $('body').on('webkitAnimationEnd oanimationend msAnimationEnd animationend', fun
        })
    })
 })
-
-$('form').on('submit', function(e){
-    e.preventDefault();
-    e.stopPropagation();
-    
-    // $.ajax({
-    //     url: "https://formspree.io/dotpegaso@gmail.com", 
-    //     method: "POST",
-    //     data: {nome: $('form input[name="name"]').val(),
-    //             email: $('form input[name="email"]').val(),
-    //             pedido: $('form select[name="job"]').val()
-    //     },
-    //     dataType: "json",
-    //     beforeSend: function(){
-    //         $('form button').text('WAIT FOR IT...');
-    //     },
-    //     success: function(){
-    //         $('form button').text('DONE!');
-    //         $('form button').addClass('done');
-    //         $('form').find('input, select, button').prop('disabled', 'disabled');
-    //     },
-    //     error: function(){
-    //         $('form button').text('EW, ERROR!');
-    //         $('form button').addClass('error');
-    //         $('form').find('input, select, button').prop('disabled', 'disabled');
-    //     }
-    // });
-});
